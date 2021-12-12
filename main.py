@@ -24,7 +24,7 @@ screen.onkeypress(l_paddle.go_down, "s")
 
 game_on = True
 while game_on:
-    time.sleep(0.05)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
 
@@ -45,6 +45,11 @@ while game_on:
     if ball.xcor() < -390:
         ball.reset_position()
         score.r_point()
+
+    if score.l_score >= 5 or score.r_score >= 5:
+        score.game_over()
+        game_on = False
+
 
 # Exit after all code is complete
 screen.exitonclick()

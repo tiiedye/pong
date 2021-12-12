@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
@@ -25,3 +26,11 @@ class Scoreboard(Turtle):
         self.r_score += 1
         self.update_score()
 
+    def game_over(self):
+        self.goto(0, 0)
+        if self.l_score > self.r_score:
+            winner = "Left Player"
+        else:
+            winner = "Right Player"
+
+        self.write(f"Game Over!\n{winner} wins!", align="center", font=("Courier", 20, "normal"))
