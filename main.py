@@ -22,9 +22,13 @@ screen.onkeypress(l_paddle.go_down, "s")
 
 game_on = True
 while game_on:
-    time.sleep(0.07)
+    time.sleep(0.08)
     screen.update()
     ball.move()
+
+    # Detect wall collision
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
 
 
 # Exit after all code is complete
