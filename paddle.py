@@ -10,18 +10,10 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.goto(position)
 
-    def up_arrow(self):
+    def go_up(self):
         new_y = self.ycor() + 20
         self.goto(self.xcor(), new_y)
 
-    def down_arrow(self):
-        new_y = self.ycor() - 20
-        self.goto(self.xcor(), new_y)
-
-    def up_w(self):
-        new_y = self.ycor() + 20
-        self.goto(self.xcor(), new_y)
-
-    def down_s(self):
+    def do_down(self):
         new_y = self.ycor() - 20
         self.goto(self.xcor(), new_y)

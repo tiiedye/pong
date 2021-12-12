@@ -13,10 +13,10 @@ r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 
 screen.listen()
-screen.onkeypress(r_paddle.up_arrow, "Up")
-screen.onkeypress(r_paddle.down_arrow, "Down")
-screen.onkeypress(l_paddle.up_w, "w")
-screen.onkeypress(l_paddle.down_s, "s")
+screen.onkeypress(r_paddle.go_up, "Up")
+screen.onkeypress(r_paddle.do_down, "Down")
+screen.onkeypress(l_paddle.go_up, "w")
+screen.onkeypress(l_paddle.go_down, "s")
 
 game_on = True
 while game_on:
