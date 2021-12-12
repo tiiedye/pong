@@ -6,18 +6,23 @@ screen = Screen()
 screen.setup(width=800, height=600)
 screen. bgcolor("black")
 screen.title("Pong")
+screen.tracer(0)
 
-paddle_1 = Paddle()
-paddle_1.goto(350, 0)
+r_paddle = Paddle()
+r_paddle.goto(350, 0)
 
-paddle_2 = Paddle()
-paddle_2.goto(-350, 0)
+l_paddle = Paddle()
+l_paddle.goto(-350, 0)
 
 screen.listen()
-screen.onkeypress(paddle_1.up_arrow, "Up")
-screen.onkeypress(paddle_1.down_arrow, "Down")
-screen.onkeypress(paddle_2.up_w, "w")
-screen.onkeypress(paddle_2.down_s, "s")
+screen.onkeypress(r_paddle.up_arrow, "Up")
+screen.onkeypress(r_paddle.down_arrow, "Down")
+screen.onkeypress(l_paddle.up_w, "w")
+screen.onkeypress(l_paddle.down_s, "s")
+
+game_on = True
+while game_on:
+    screen.update()
 
 
 # Exit after all code is complete
