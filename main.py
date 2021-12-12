@@ -8,11 +8,9 @@ screen. bgcolor("black")
 screen.title("Pong")
 screen.tracer(0)
 
-r_paddle = Paddle()
-r_paddle.goto(350, 0)
+r_paddle = Paddle((350, 0))
 
-l_paddle = Paddle()
-l_paddle.goto(-350, 0)
+l_paddle = Paddle((-350, 0))
 
 screen.listen()
 screen.onkeypress(r_paddle.up_arrow, "Up")
